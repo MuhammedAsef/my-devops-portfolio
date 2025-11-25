@@ -1,0 +1,38 @@
+/* assets/css/custom.css */
+
+/* Typewriter Taşıyıcısı */
+.typewriter {
+  display: inline-flex; /* İçeriğe göre genişle */
+  justify-content: center;
+}
+
+/* Typewriter Efekti */
+.typewriter h1 {
+  overflow: hidden; /* Taşanı gizle */
+  border-right: .15em solid #f97316; /* Blowfish turuncusu */
+  white-space: nowrap; /* Tek satır */
+  margin: 0;
+  letter-spacing: .05em;
+  
+  /* Responsive Font: Telefonta küçük, PC'de büyük */
+  font-size: clamp(1.5rem, 4vw, 3.5rem);
+  font-weight: 700; /* Kalın yazı */
+  color: var(--color-primary-500); /* Temanın ana rengini kullan */
+
+  /* Animasyon Başlangıcı */
+  width: 0;
+  animation: 
+    typing 3.5s steps(40, end) forwards,
+    blink-caret .75s step-end infinite;
+}
+
+/* Animasyon Keyframe'leri */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #f97316; }
+}

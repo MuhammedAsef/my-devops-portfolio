@@ -1,6 +1,6 @@
 baseURL = "https://d194cqm3knl40v.cloudfront.net/" # CloudFront adresin
 languageCode = "tr"
-title = "Merhaba, Muhammed Asef"
+title = "Muhammed Asef"
 theme = "blowfish"
 
 enableRobotsTXT = true
@@ -34,7 +34,7 @@ buildFuture = false
   [author]
     name = "Muhammed Asef"
     image = "images/profil-foto.jpg" # Profil foton buraya
-    headline = "DevOps Engineer & Cloud Enthusiast"
+    headline = """<div class="typewriter"><h1>DevOps Engineer & Cloud Enthusiast</h1></div>"""
     bio = "Otomasyon, Cloud Native teknolojiler ve CI/CD süreçleri üzerine çalışıyorum."
     links = [
       { email = "mailto:asefkmv4@gmail.com" },
