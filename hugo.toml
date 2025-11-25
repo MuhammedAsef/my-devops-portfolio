@@ -8,40 +8,46 @@ buildDrafts = false
 buildFuture = false
 
 [params]
-  colorScheme = "blowfish" # Veya "fireball", "horizon" gibi renkleri var
+  colorScheme = "blowfish"
   defaultTheme = "dark"
-  
-  # Ana Sayfa (Hero) Ayarları - Senin istediğin o havalı giriş
+  enableSearch = true
+
+  # Ana Sayfa Ayarları
   [params.homepage]
-    layout = "background" # Arka planda görsel olsun
+    layout = "background"
     showRecent = true
     showRecentItems = 3
-    
     [params.homepage.button]
       enable = true
       text = "Projelerime Git"
       url = "projects/"
 
-  # Üst Kısım (Header)
-  [params.header]
-    layout = "fixed"
-
-  # Alt Kısım (Footer)
-  [params.footer]
-    showScrollToTop = true
-
-  # Yazar Bilgisi (Sol üstte veya Hero'da çıkar)
+  # Yazar Ayarları (Sorun çıkaran kısım düzeltildi)
   [params.author]
     name = "Muhammed Asef"
     image = "images/profil-foto.jpg"
-    # HTML kodunu tekrar ekliyoruz:
+    # Daktilo efekti burada:
     headline = """<div class="typewriter"><h1>DevOps Engineer & Cloud Enthusiast</h1></div>"""
     bio = "Otomasyon, Cloud Native teknolojiler ve CI/CD süreçleri üzerine çalışıyorum."
+    
+    # Sosyal Linkler
     links = [
-      { email = "mailto:mail@adresin.com" },
-      { github = "https://github.com/KULLANICIADIN" },
-      { linkedin = "https://linkedin.com/in/KULLANICIADIN" }
+      { email = "mailto:asefkmv4@gmail.com" },
+      { github = "https://github.com/MuhammedAsef" },
+      { linkedin = "https://linkedin.com/in/muhammedasefkumandaveren013" }
     ]
+
+  [params.header]
+    layout = "fixed"
+
+  [params.footer]
+    showScrollToTop = true
+
+# HTML kodlarının çalışması için güvenlik izni
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [menu]
   [[menu.main]]
@@ -54,7 +60,3 @@ buildFuture = false
     name = "Hakkımda"
     url = "/about/"
     weight = 20
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
