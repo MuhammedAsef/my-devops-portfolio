@@ -7,7 +7,7 @@
 
 .typewriter h1 {
   display: inline-block;
-  overflow: auto; /* Taşanı gizle */
+  overflow: visible; /* Taşanı gizle */
   border-right: .15em solid orange; /* İmleç */
   white-space: nowrap; /* Asla alt satıra geçme */
   margin: 0 auto;
@@ -15,7 +15,7 @@
   
   /* --- KRİTİK AYAR: RESPONSIVE FONT --- */
   /* Ekran küçüldükçe yazı da küçülecek. */
-  font-size: clamp(14px, 3.5vw, 28px); 
+  font-size: clamp(8px, 3.5vw, 28px); 
   /* Anlamı: En küçük 14px, normalde ekranın %3.5'i kadar, en büyük 28px olsun. */
 
   /* Animasyon ayarları */
