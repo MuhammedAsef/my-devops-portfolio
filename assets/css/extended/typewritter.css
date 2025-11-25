@@ -2,7 +2,7 @@
 
 /* 1. ADIM: PaperMod'un varsayılan dar sınırını (Profil için) kırıyoruz */
 .profile {
-    max-width: 75% !important; /* Sınırı 800px'den 1200px'e çıkar */
+    max-width: 1500px !important; /* Sınırı 800px'den 1200px'e çıkar */
     width: 95% !important;        /* Ekranın %95'ini kullan */
     margin: 0 auto;               /* Ortala */
 }
