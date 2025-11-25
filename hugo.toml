@@ -1,6 +1,6 @@
 baseURL = "https://d194cqm3knl40v.cloudfront.net/" # CloudFront adresin
 languageCode = "tr"
-title = "Muhammed Asef"
+title = "Merhaba, Muhammed Asef"
 theme = "blowfish"
 
 enableRobotsTXT = true
