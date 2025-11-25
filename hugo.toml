@@ -49,3 +49,7 @@ buildFuture = false
         name = "Arşiv"
         url = "/archives/"
         weight = 30
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
