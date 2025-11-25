@@ -1,31 +1,28 @@
-/* typewriter.css - GÜNCELLENMİŞ VERSİYON */
+/* typewriter.css - FIXED VERSION */
+.typewriter {
+  display: flex;
+  justify-content: center; /* Ortala */
+  width: 100%;
+}
+
 .typewriter h1 {
   display: inline-block;
-  overflow: hidden; /* Taşan kısımları gizle */
-  border-right: .15em solid orange; /* İmleç rengi */
-  white-space: nowrap; /* Metni tek satırda tut */
+  overflow: hidden; /* Taşanı gizle */
+  border-right: .15em solid orange; /* İmleç */
+  white-space: nowrap; /* Asla alt satıra geçme */
   margin: 0 auto;
-  letter-spacing: .10em;
+  letter-spacing: .05em; /* Harf aralığını biraz kıstık */
   
-  /* DEĞİŞİKLİK 1: Adım sayısını 60'a çıkardık (Uzun isimler için) */
-  /* DEĞİŞİKLİK 2: Süreyi 4 saniye yaptık */
+  /* --- KRİTİK AYAR: RESPONSIVE FONT --- */
+  /* Ekran küçüldükçe yazı da küçülecek. */
+  font-size: clamp(14px, 3.5vw, 28px); 
+  /* Anlamı: En küçük 14px, normalde ekranın %3.5'i kadar, en büyük 28px olsun. */
+
+  /* Animasyon ayarları */
+  width: 0; /* Başlangıçta genişlik 0 */
   animation: 
-    typing 4s steps(60, end),
+    typing 4s steps(60, end) forwards, /* forwards: bitince öyle kal */
     blink-caret .75s step-end infinite;
-}
-
-/* DEĞİŞİKLİK 3: Mobil ve küçük ekranlar için yazı boyutunu küçültüyoruz */
-@media screen and (max-width: 768px) {
-    .typewriter h1 {
-        font-size: 18px; /* Telefondan bakınca taşmasın */
-    }
-}
-
-/* Büyük ekranlarda da çok devasa olmaması için limit */
-@media screen and (min-width: 769px) {
-    .typewriter h1 {
-        font-size: 28px; /* PC'de ideal boyut */
-    }
 }
 
 @keyframes typing {
