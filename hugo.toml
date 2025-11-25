@@ -1,0 +1,50 @@
+baseURL = "https://d194cqm3knl40v.cloudfront.net/" # İleride gerçek domaininle değiştireceğiz
+languageCode = "tr"
+title = "My DevOps Journey" # Buraya kendi adını da yazabilirsin
+theme = "PaperMod"
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+
+[params]
+    defaultTheme = "dark" # DevOps ruhuna uygun olarak varsayılan karanlık mod
+    description = "Cloud, Automation, and DevOps Portfolio"
+    author = "Muhammed Asef Kumandaveren"
+    
+    # Ana sayfada görünecek profil kısmı
+    [params.homeInfoParams]
+        Title = "Merhaba, Ben Muhammed Asef Kumandaveren 👋"
+        Content = """
+        DevOps Mühendisiyi Adayıyım.
+        Otomasyon, Cloud Native teknolojiler ve CI/CD süreçleri üzerine çalışıyorum.
+        Burada projelerimi ve öğrendiklerimi paylaşıyorum.
+        """
+
+    # Sosyal Medya İkonları (Linkleri kendine göre düzenle)
+    [[params.socialIcons]]
+        name = "github"
+        url = "https://github.com/MuhammedAsef"
+    [[params.socialIcons]]
+        name = "linkedin"
+        url = "https://linkedin.com/in/muhammedasefkumandaveren013"
+    [[params.socialIcons]]
+        name = "email"
+        url = "mailto:asefkmv4@gmail.com"
+
+[menu]
+    [[menu.main]]
+        identifier = "projects"
+        name = "Projeler"
+        url = "/projects/"
+        weight = 10
+    [[menu.main]]
+        identifier = "about"
+        name = "Hakkımda"
+        url = "/about/"
+        weight = 20
+    [[menu.main]]
+        identifier = "archives"
+        name = "Arşiv"
+        url = "/archives/"
+        weight = 30

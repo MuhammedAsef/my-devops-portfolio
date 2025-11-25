@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AWS on My DevOps Journey</title><link>https://d194cqm3knl40v.cloudfront.net/tags/aws/</link><description>Recent content in AWS on My DevOps Journey</description><generator>Hugo -- 0.152.2</generator><language>tr</language><lastBuildDate>Sat, 25 Nov 2023 23:00:00 +0300</lastBuildDate><atom:link href="https://d194cqm3knl40v.cloudfront.net/tags/aws/index.xml" rel="self" type="application/rss+xml"/><item><title>AWS Üzerinde Web Sunucusu Kurulumu</title><link>https://d194cqm3knl40v.cloudfront.net/projects/ilk-projem/</link><pubDate>Sat, 25 Nov 2023 23:00:00 +0300</pubDate><guid>https://d194cqm3knl40v.cloudfront.net/projects/ilk-projem/</guid><description>&lt;h2 id="proje-hakkında"&gt;Proje Hakkında&lt;/h2&gt;
+&lt;p&gt;Bu projede AWS EC2 servisi kullanarak Linux tabanlı bir web sunucusu ayağa kaldırdım.&lt;/p&gt;
+&lt;h3 id="kullanılan-teknolojiler"&gt;Kullanılan Teknolojiler&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;AWS EC2&lt;/li&gt;
+&lt;li&gt;Ubuntu Server&lt;/li&gt;
+&lt;li&gt;Nginx&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="nasıl-yaptım"&gt;Nasıl Yaptım?&lt;/h3&gt;
+&lt;p&gt;Buraya projenin detaylarını, kodlarını, ekran görüntülerini ekleyebilirsin.&lt;/p&gt;</description></item><item><title>Project: Building a DevOps Portfolio</title><link>https://d194cqm3knl40v.cloudfront.net/projects/portfolyo-mimarisini-kurmak/</link><pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate><guid>https://d194cqm3knl40v.cloudfront.net/projects/portfolyo-mimarisini-kurmak/</guid><description>Bu portfolyo sitesinin sıfırdan inşası, otomasyon süreçleri ve bulut mimarisi üzerine teknik notlarım.</description></item></channel></rss>
