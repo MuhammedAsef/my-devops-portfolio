@@ -53,3 +53,7 @@ buildFuture = false
     name = "Hakkımda"
     url = "/about/"
     weight = 20
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
