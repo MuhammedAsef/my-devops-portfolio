@@ -14,12 +14,12 @@ buildFuture = false
     
     # Ana sayfada görünecek profil kısmı
     [params.homeInfoParams]
-        # Title = "Merhaba, Ben Muhammed Asef Kumandaveren 👋"
-        Title = """<div class="typewriter"><h1>Merhaba, Ben Muhammed Asef Kumandaveren👋</h1></div>"""
+        # Title = "Merhaba, Ben Muhammed Asef Kumandaveren "
+        Title = """<div class="typewriter"><h1>Merhaba, Ben Muhammed Asef Kumandaveren</h1></div>"""
         Content = """
         DevOps Mühendisiyi Adayıyım.
         Otomasyon, Cloud Native teknolojiler ve CI/CD süreçleri üzerine çalışıyorum.
-        🚀 Bu site AWS üzerinde barınmakta ve GitHub Actions ile otomatik deploy edilmektedir.
+        Bu site AWS üzerinde barınmakta ve GitHub Actions ile otomatik deploy edilmektedir.
         """
 
     # Sosyal Medya İkonları (Linkleri kendine göre düzenle)
