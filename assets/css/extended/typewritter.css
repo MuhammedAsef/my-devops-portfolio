@@ -7,7 +7,7 @@
 
 .typewriter h1 {
   display: inline-block;
-  overflow: hidden; /* Taşanı gizle */
+  overflow: auto; /* Taşanı gizle */
   border-right: .15em solid orange; /* İmleç */
   white-space: nowrap; /* Asla alt satıra geçme */
   margin: 0 auto;
