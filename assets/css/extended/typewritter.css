@@ -1,27 +1,34 @@
-/* typewriter.css - FIXED VERSION */
+/* typewriter.css - GENİŞ VERSİYON */
+
+/* 1. ADIM: PaperMod'un varsayılan dar sınırını (Profil için) kırıyoruz */
+.profile {
+    max-width: 75% !important; /* Sınırı 800px'den 1200px'e çıkar */
+    width: 95% !important;        /* Ekranın %95'ini kullan */
+    margin: 0 auto;               /* Ortala */
+}
+
+/* 2. ADIM: Typewriter Ayarları */
 .typewriter {
   display: flex;
-  justify-content: center; /* Ortala */
+  justify-content: center;
   width: 100%;
 }
 
 .typewriter h1 {
   display: inline-block;
-  overflow: hidden; /* Taşanı gizle */
-  border-right: .15em solid orange; /* İmleç */
-  white-space: nowrap; /* Asla alt satıra geçme */
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
   margin: 0 auto;
-  letter-spacing: .05em; /* Harf aralığını biraz kıstık */
+  letter-spacing: .05em;
   
-  /* --- KRİTİK AYAR: RESPONSIVE FONT --- */
-  /* Ekran küçüldükçe yazı da küçülecek. */
-  font-size: clamp(14px, 3.5vw, 28px); 
-  /* Anlamı: En küçük 14px, normalde ekranın %3.5'i kadar, en büyük 28px olsun. */
+  /* Yazı boyutunu uzun ismine göre optimize ettik */
+  font-size: clamp(16px, 3vw, 32px); 
 
-  /* Animasyon ayarları */
-  width: 0; /* Başlangıçta genişlik 0 */
+  /* Animasyon */
+  width: 0;
   animation: 
-    typing 4s steps(60, end) forwards, /* forwards: bitince öyle kal */
+    typing 3.5s steps(60, end) forwards,
     blink-caret .75s step-end infinite;
 }
 
