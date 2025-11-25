@@ -32,8 +32,28 @@ Kodları GitHub'a taşırken `public` klasörünü `.gitignore` dosyasına ekled
 
 *(Buraya ileride GitHub repo linkini ve ekran görüntülerini ekleyebilirsin)*
 
-## Phase 3: Cloud Mimarisi ve Deployment
-*(Bunu AWS adımını yaparken dolduracağız)*
+## Phase 3: Cloud Mimarisi (AWS)
+Sitenin barındırılması (Hosting) için sunucu kiralama maliyetinden kaçınmak ve yüksek performans sağlamak amacıyla **Serverless** bir mimari kurdum.
+
+* **Amazon S3:** Statik dosyaları (HTML/CSS/JS) depolamak için yapılandırıldı. "Static Website Hosting" özelliği aktif edildi.
+* **Amazon CloudFront (CDN):** S3 bucket'ının önüne konumlandırıldı. Bu sayede:
+    * Siteye **HTTPS (SSL)** sertifikası eklendi.
+    * İçerikler dünya genelindeki Edge Location'lara dağıtıldı (Düşük gecikme süresi).
+    * HTTP istekleri otomatik olarak HTTPS'e yönlendirildi.
+
+## Phase 4: CI/CD Otomasyonu (GitHub Actions)
+Manuel deployment hatalarını önlemek için **Continuous Deployment (CD)** süreci tasarlandı.
+
+1.  **IAM & Security:** AWS üzerinde `github-actions-deployer` adında kısıtlı yetkilere sahip (Least Privilege) bir servis kullanıcısı oluşturuldu.
+2.  **GitHub Secrets:** Hassas veriler (Access Key, Secret Key, Bucket ID) repoya düz metin olarak değil, şifreli Secret olarak eklendi.
+3.  **Pipeline Workflow:** `.github/workflows/deploy.yml` dosyası ile şu adımlar otomatize edildi:
+    * Checkout Code (Kodun çekilmesi)
+    * Setup Hugo (Hugo ortamının kurulması)
+    * Build & Minify (Sitenin derlenmesi)
+    * Sync to S3 (Değişen dosyaların S3'e yüklenmesi)
+    * Invalidate CloudFront Cache (CDN önbelleğinin temizlenmesi)
+
+Artık her `git push` işleminde sitem 1 dakika içinde canlıya alınmaktadır. 🚀
 
 ## 📈 Sonuç ve Kazanımlar
 Bu proje sayesinde:
