@@ -1,55 +1,55 @@
-baseURL = "https://d194cqm3knl40v.cloudfront.net/" # İleride gerçek domaininle değiştireceğiz
+baseURL = "https://d194cqm3knl40v.cloudfront.net/" # CloudFront adresin
 languageCode = "tr"
-title = "My DevOps Journey" # Buraya kendi adını da yazabilirsin
-theme = "PaperMod"
+title = "Muhammed Asef"
+theme = "blowfish"
 
 enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
 
 [params]
-    defaultTheme = "dark" # DevOps ruhuna uygun olarak varsayılan karanlık mod
-    description = "Cloud, Automation, and DevOps Portfolio"
-    author = "Muhammed Asef Kumandaveren"
+  colorScheme = "blowfish" # Veya "fireball", "horizon" gibi renkleri var
+  defaultTheme = "dark"
+  
+  # Ana Sayfa (Hero) Ayarları - Senin istediğin o havalı giriş
+  [params.homepage]
+    layout = "background" # Arka planda görsel olsun
+    showRecent = true
+    showRecentItems = 3
     
-    # Ana sayfada görünecek profil kısmı
-    [params.homeInfoParams]
-        # Title = "Merhaba, Ben Muhammed Asef Kumandaveren "
-        Title = """<div class="typewriter"><h1>Merhaba, Ben Muhammed Asef Kumandaveren</h1></div>"""
-        Content = """
-        DevOps Mühendisiyi Adayıyım.
-        Otomasyon, Cloud Native teknolojiler ve CI/CD süreçleri üzerine çalışıyorum.
-        Bu site AWS üzerinde barınmakta ve GitHub Actions ile otomatik deploy edilmektedir.
-        """
+    [params.homepage.button]
+      enable = true
+      text = "Projelerime Git"
+      url = "projects/"
 
-    # Sosyal Medya İkonları (Linkleri kendine göre düzenle)
-    [[params.socialIcons]]
-        name = "github"
-        url = "https://github.com/MuhammedAsef"
-    [[params.socialIcons]]
-        name = "linkedin"
-        url = "https://linkedin.com/in/muhammedasefkumandaveren013"
-    [[params.socialIcons]]
-        name = "email"
-        url = "mailto:asefkmv4@gmail.com"
+  # Üst Kısım (Header)
+  [params.header]
+    layout = "fixed"
+
+  # Alt Kısım (Footer)
+  [params.footer]
+    showScrollToTop = true
+
+  # Yazar Bilgisi (Sol üstte veya Hero'da çıkar)
+  [author]
+    name = "Muhammed Asef"
+    image = "images/profil-foto.jpg" # Profil foton buraya
+    headline = "DevOps Engineer & Cloud Enthusiast"
+    bio = "Otomasyon, Cloud Native teknolojiler ve CI/CD süreçleri üzerine çalışıyorum."
+    links = [
+      { email = "mailto:asefkmv4@gmail.com" },
+      { github = "https://github.com/MuhammedAsef" },
+      { linkedin = "https://linkedin.com/in/muhammedasefkumandaveren013" }
+    ]
 
 [menu]
-    [[menu.main]]
-        identifier = "projects"
-        name = "Projeler"
-        url = "/projects/"
-        weight = 10
-    [[menu.main]]
-        identifier = "about"
-        name = "Hakkımda"
-        url = "/about/"
-        weight = 20
-    [[menu.main]]
-        identifier = "archives"
-        name = "Arşiv"
-        url = "/archives/"
-        weight = 30
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projeler"
+    url = "/projects/"
+    weight = 10
+  [[menu.main]]
+    identifier = "about"
+    name = "Hakkımda"
+    url = "/about/"
+    weight = 20
