@@ -31,15 +31,16 @@ buildFuture = false
     showScrollToTop = true
 
   # Yazar Bilgisi (Sol üstte veya Hero'da çıkar)
-  [author]
+  [params.author]
     name = "Muhammed Asef"
-    image = "images/profil-foto.jpg" # Profil foton buraya
+    image = "images/profil-foto.jpg"
+    # HTML kodunu tekrar ekliyoruz:
     headline = """<div class="typewriter"><h1>DevOps Engineer & Cloud Enthusiast</h1></div>"""
     bio = "Otomasyon, Cloud Native teknolojiler ve CI/CD süreçleri üzerine çalışıyorum."
     links = [
-      { email = "mailto:asefkmv4@gmail.com" },
-      { github = "https://github.com/MuhammedAsef" },
-      { linkedin = "https://linkedin.com/in/muhammedasefkumandaveren013" }
+      { email = "mailto:mail@adresin.com" },
+      { github = "https://github.com/KULLANICIADIN" },
+      { linkedin = "https://linkedin.com/in/KULLANICIADIN" }
     ]
 
 [menu]
