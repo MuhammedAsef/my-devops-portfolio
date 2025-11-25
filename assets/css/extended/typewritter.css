@@ -1,24 +1,39 @@
-/* typewriter.css */
+/* typewriter.css - GÜNCELLENMİŞ VERSİYON */
 .typewriter h1 {
   display: inline-block;
   overflow: hidden; /* Taşan kısımları gizle */
-  border-right: .15em solid rgb(20, 194, 238); /* İmleç (Cursor) rengi */
+  border-right: .15em solid orange; /* İmleç rengi */
   white-space: nowrap; /* Metni tek satırda tut */
-  margin: 0 auto; /* Ortala */
-  letter-spacing: .10em; /* Harf aralığı */
-  animation:
-    typing 3.5s steps(40, end),
+  margin: 0 auto;
+  letter-spacing: .10em;
+  
+  /* DEĞİŞİKLİK 1: Adım sayısını 60'a çıkardık (Uzun isimler için) */
+  /* DEĞİŞİKLİK 2: Süreyi 4 saniye yaptık */
+  animation: 
+    typing 4s steps(60, end),
     blink-caret .75s step-end infinite;
 }
 
-/* Yazma animasyonu */
+/* DEĞİŞİKLİK 3: Mobil ve küçük ekranlar için yazı boyutunu küçültüyoruz */
+@media screen and (max-width: 768px) {
+    .typewriter h1 {
+        font-size: 18px; /* Telefondan bakınca taşmasın */
+    }
+}
+
+/* Büyük ekranlarda da çok devasa olmaması için limit */
+@media screen and (min-width: 769px) {
+    .typewriter h1 {
+        font-size: 28px; /* PC'de ideal boyut */
+    }
+}
+
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
 }
 
-/* İmleç yanıp sönme animasyonu */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: rgb(20, 194, 238); } /* İmleç rengiyle aynı olmalı */
+  50% { border-color: orange; }
 }
