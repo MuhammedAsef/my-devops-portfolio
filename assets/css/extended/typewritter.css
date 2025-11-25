@@ -1,0 +1,24 @@
+/* typewriter.css */
+.typewriter h1 {
+  display: inline-block;
+  overflow: hidden; /* Taşan kısımları gizle */
+  border-right: .15em solid rgb(20, 194, 238); /* İmleç (Cursor) rengi */
+  white-space: nowrap; /* Metni tek satırda tut */
+  margin: 0 auto; /* Ortala */
+  letter-spacing: .10em; /* Harf aralığı */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* Yazma animasyonu */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* İmleç yanıp sönme animasyonu */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(20, 194, 238); } /* İmleç rengiyle aynı olmalı */
+}

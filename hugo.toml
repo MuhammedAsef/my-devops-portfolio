@@ -14,7 +14,8 @@ buildFuture = false
     
     # Ana sayfada görünecek profil kısmı
     [params.homeInfoParams]
-        Title = "Merhaba, Ben Muhammed Asef Kumandaveren 👋"
+        # Title = "Merhaba, Ben Muhammed Asef Kumandaveren 👋"
+        Title = """<div class="typewriter"><h1>Merhaba, Ben Muhammed Asef Kumandaveren👋</h1></div>"""
         Content = """
         DevOps Mühendisiyi Adayıyım.
         Otomasyon, Cloud Native teknolojiler ve CI/CD süreçleri üzerine çalışıyorum.
