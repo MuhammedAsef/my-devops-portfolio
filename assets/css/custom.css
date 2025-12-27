@@ -1,38 +1,112 @@
-/* assets/css/custom.css */
+/* assets/css/custom.css - CYBERPUNK EDITION */
 
-/* Typewriter Taşıyıcısı */
+/* 1. ADIM: Google Fonts'tan "JetBrains Mono" (Kodlama Fontu) Çekiyoruz */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap');
+
+:root {
+    /* Ana Fontu Değiştir */
+    --font-sans: 'JetBrains Mono', monospace; 
+    
+    /* Neon Renklerimiz */
+    --neon-cyan: #00f3ff;
+    --neon-pink: #ff00ff;
+    --neon-orange: #f97316;
+}
+
+/* Tüm siteye fontu uygula */
+body {
+    font-family: var(--font-sans) !important;
+}
+
+/* 2. ADIM: Daktilo Efekti (Geliştirilmiş) */
 .typewriter {
-  display: inline-flex; /* İçeriğe göre genişle */
-  justify-content: center;
+    display: inline-flex;
+    justify-content: center;
 }
 
-/* Typewriter Efekti */
 .typewriter h1 {
-  overflow: hidden; /* Taşanı gizle */
-  border-right: .15em solid #f97316; /* Blowfish turuncusu */
-  white-space: nowrap; /* Tek satır */
-  margin: 0;
-  letter-spacing: .05em;
-  
-  /* Responsive Font: Telefonta küçük, PC'de büyük */
-  font-size: clamp(1.5rem, 4vw, 3.5rem);
-  font-weight: 700; /* Kalın yazı */
-  color: var(--color-primary-500); /* Temanın ana rengini kullan */
-
-  /* Animasyon Başlangıcı */
-  width: 0;
-  animation: 
-    typing 3.5s steps(40, end) forwards,
-    blink-caret .75s step-end infinite;
+    overflow: hidden;
+    border-right: .15em solid var(--neon-orange);
+    white-space: nowrap;
+    margin: 0;
+    letter-spacing: .05em;
+    font-size: clamp(1.2rem, 3.5vw, 3rem); /* Responsive Boyut */
+    font-weight: 800;
+    color: var(--neon-orange);
+    text-shadow: 0 0 10px rgba(249, 115, 22, 0.5); /* Hafif Neon Parlama */
+    
+    width: 0;
+    animation: 
+        typing 3.5s steps(40, end) forwards,
+        blink-caret .75s step-end infinite;
 }
 
-/* Animasyon Keyframe'leri */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+/* Animasyonlar */
+@keyframes typing { from { width: 0 } to { width: 100% } }
+@keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--neon-orange); } }
+
+/* 3. ADIM: Profil Resmi Efekti */
+/* Resmin etrafına dönen renkli bir çember ekleyelim mi? */
+.relative img.rounded-full {
+    border: 3px solid transparent;
+    background: linear-gradient(45deg, var(--neon-cyan), var(--neon-pink)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.5));
+    transition: transform 0.5s ease;
 }
 
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #f97316; }
+.relative img.rounded-full:hover {
+    transform: scale(1.05) rotate(5deg); /* Üzerine gelince büyür ve döner */
+}
+
+/* 4. ADIM: Glassmorphism (Buzlu Cam) Kartlar */
+/* Makale/Proje kartları */
+article {
+    background: rgba(255, 255, 255, 0.05) !important; /* Yarı saydam */
+    backdrop-filter: blur(10px); /* Buzlu cam efekti */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px); /* Yukarı kalkma */
+    border-color: var(--neon-cyan); /* Kenar rengi değişir */
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.2); /* Neon gölge */
+}
+
+/* 5. ADIM: Özel Scrollbar (Kaydırma Çubuğu) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f0f0f; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333; 
+    border-radius: 5px;
+    border: 2px solid #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--neon-orange); /* Tutunca turuncu olur */
+}
+
+/* 6. ADIM: Butonlar */
+a.bg-primary-600 {
+    background: transparent !important;
+    border: 2px solid var(--neon-orange);
+    color: var(--neon-orange) !important;
+    box-shadow: 0 0 10px rgba(249, 115, 22, 0.2);
+    transition: all 0.3s ease;
+}
+
+a.bg-primary-600:hover {
+    background: var(--neon-orange) !important;
+    color: black !important;
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.8);
 }
