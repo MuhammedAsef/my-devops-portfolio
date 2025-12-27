@@ -110,3 +110,9 @@ a.bg-primary-600:hover {
     color: black !important;
     box-shadow: 0 0 20px rgba(249, 115, 22, 0.8);
 }
+
+/* Arka plan görselini zorla YUKARI hizala */
+/* Tema ne derse desin, resmin üst kısmı (kafan) görünecek. */
+img.fixed.inset-0.z-0.h-full.w-full.object-cover {
+  object-position: top center !important;
+}
