@@ -6,7 +6,7 @@ tags: ["Flutter", "Mobile App", "API", "Google Play"]
 summary: "Nöbetçi eczaneleri anlık olarak bulan, kullanıcı dostu mobil uygulama."
 showDate: true
 showHero: true
-heroStyle: "thumb"
+heroStyle: "background"
 showTableOfContents: false
 ---
 
