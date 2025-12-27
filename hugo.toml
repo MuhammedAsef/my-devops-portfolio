@@ -15,6 +15,7 @@ buildFuture = false
   # Ana Sayfa Ayarları
   [params.homepage]
     layout = "background"
+    background_anchor = "Top"
     showRecent = true
     showRecentItems = 3
     [params.homepage.button]
