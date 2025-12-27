@@ -1,4 +1,4 @@
-/* assets/css/custom.css - FULL WIDTH & CYBERPUNK EDITION */
+/* assets/css/custom.css - FINAL FIXED VERSION V2 (Daktilo & Resim Onarıldı) */
 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap');
 
@@ -11,15 +11,16 @@
 
 body {
     font-family: var(--font-sans) !important;
-    overflow-x: hidden; /* Yatay scroll barı engelle */
+    overflow-x: hidden;
 }
 
-/* --- DAKTİLO EFEKTİ --- */
+/* --- DAKTİLO EFEKTİ (ONARILDI) --- */
 .typewriter {
     display: inline-flex;
     justify-content: center;
 }
 
+/* BURASI DÜZELTİLDİ: !important eklendi ki diğer kurallar ezmesin */
 .typewriter h1 {
     overflow: hidden;
     border-right: .15em solid var(--neon-orange);
@@ -30,7 +31,10 @@ body {
     font-weight: 800;
     color: var(--neon-orange);
     text-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
-    width: 0;
+    
+    /* KRİTİK DÜZELTME: Başlangıç genişliği zorla 0 yapıldı */
+    width: 0 !important;
+    
     animation: 
         typing 3.5s steps(40, end) forwards,
         blink-caret .75s step-end infinite;
@@ -88,39 +92,42 @@ a.bg-primary-600:hover {
     box-shadow: 0 0 20px rgba(249, 115, 22, 0.8);
 }
 
-/* --- !!! NUCLEAR OPTION: TAM EKRAN ZORLAMASI !!! --- */
-/* Burası o sağdaki boşluğu (kırmızı kutu) yok edecek */
+/* --- NUCLEAR OPTION: TAM EKRAN ZORLAMASI (DÜZELTİLMİŞ) --- */
 
-/* 1. Tüm ana kapsayıcıların genişlik limitini kaldır */
+/* 1. Kapsayıcıların limitini kaldır */
 main, article, .max-w-7xl, section {
     max-width: 100% !important;
     width: 100% !important;
     min-width: 100% !important;
-    padding-left: 1rem; /* Yazılar monitöre yapışmasın diye minik boşluk */
+    padding-left: 1rem;
     padding-right: 1rem;
 }
 
-/* 2. Yazı sütununun (prose) darlığını kaldır */
+/* 2. Yazı sütununun darlığını kaldır */
 .prose {
-    max-width: none !important; /* Limit yok */
+    max-width: none !important;
     min-width: 100% !important;
 }
 
-/* 3. İçerik elemanlarını sayfaya yay */
-.prose :where(p, h1, h2, h3, ul, ol, div, pre, blockquote) {
+/* 3. İçerik elemanlarını sayfaya yay (H1 hariç tutuldu) */
+/* DÜZELTME: Daktilo bozulmasın diye :not(.typewriter h1) eklendi */
+.prose :where(p, h2, h3, ul, ol, div, pre, blockquote):not(.typewriter h1) {
     max-width: 100% !important;
     width: 100% !important;
-    text-align: left; /* Her şeyi sola yasla */
+    text-align: left;
 }
 
-/* 4. Sağdaki 'sidebar' veya 'toc' boşluğunu sıfırla */
+/* 4. Sağdaki boşluğu sıfırla */
 div.flex.flex-col {
     width: 100% !important;
     max-width: 100% !important;
 }
 
-/* Resimlerin oranını bozmadan sığdır */
-img {
-    max-width: 100% !important;
-    height: auto !important;
+/* 5. RESİM DÜZELTMESİ */
+/* Arka plan resmi bozulmasın diye global img kuralını sildik */
+/* Sadece içerik içindeki resimler sığsın: */
+.prose img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Hazır el atmışken kenarları da yuvarlayalım */
 }
