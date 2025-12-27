@@ -5,13 +5,8 @@ draft: false
 tags: ["Flutter", "Mobile App", "API", "Google Play"]
 summary: "Nöbetçi eczaneleri anlık olarak bulan, kullanıcı dostu mobil uygulama."
 showDate: true
-
-# --- RESİM AYARLARI ---
-# Proje kartında ve detay sayfasında görünecek resim
-image: "images/eczsearch.jpg"
-showHero: true      # Detay sayfasının en üstünde büyük görünsün mü?
-heroStyle: "background" # "background" (arkada) veya "thumb" (küçük) olabilir
-# ----------------------
+showHero: true
+heroStyle: "background"
 ---
 
 ## 📱 Proje Hakkında
@@ -19,8 +14,6 @@ heroStyle: "background" # "background" (arkada) veya "thumb" (küçük) olabilir
 **EczSearch**, acil durumlarda insanların en yakın nöbetçi eczaneye en hızlı şekilde ulaşmasını sağlamak amacıyla geliştirdiğim bir mobil uygulamadır.
 
 Modern arayüzü ve hızlı altyapısı sayesinde, saniyeler içinde konumunuza en yakın açık eczaneyi listeler, yol tarifi almanızı sağlar.
-
-### 📸 Ekran Görüntüleri
 
 ### 🛠️ Kullanılan Teknolojiler
 
