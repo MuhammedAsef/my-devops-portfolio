@@ -1,24 +1,19 @@
-/* assets/css/custom.css - CYBERPUNK EDITION */
+/* assets/css/custom.css - FINAL FIXED VERSION */
 
-/* 1. ADIM: Google Fonts'tan "JetBrains Mono" (Kodlama Fontu) Çekiyoruz */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap');
 
 :root {
-    /* Ana Fontu Değiştir */
     --font-sans: 'JetBrains Mono', monospace; 
-    
-    /* Neon Renklerimiz */
     --neon-cyan: #00f3ff;
     --neon-pink: #ff00ff;
     --neon-orange: #f97316;
 }
 
-/* Tüm siteye fontu uygula */
 body {
     font-family: var(--font-sans) !important;
 }
 
-/* 2. ADIM: Daktilo Efekti (Geliştirilmiş) */
+/* --- DAKTİLO EFEKTİ --- */
 .typewriter {
     display: inline-flex;
     justify-content: center;
@@ -30,73 +25,55 @@ body {
     white-space: nowrap;
     margin: 0;
     letter-spacing: .05em;
-    font-size: clamp(1.2rem, 3.5vw, 3rem); /* Responsive Boyut */
+    font-size: clamp(1.2rem, 3.5vw, 3rem);
     font-weight: 800;
     color: var(--neon-orange);
-    text-shadow: 0 0 10px rgba(249, 115, 22, 0.5); /* Hafif Neon Parlama */
-    
+    text-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
     width: 0;
     animation: 
         typing 3.5s steps(40, end) forwards,
         blink-caret .75s step-end infinite;
 }
 
-/* Animasyonlar */
 @keyframes typing { from { width: 0 } to { width: 100% } }
 @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--neon-orange); } }
 
-/* 3. ADIM: Profil Resmi Efekti */
-/* Resmin etrafına dönen renkli bir çember ekleyelim mi? */
+/* --- PROFİL RESMİ DÜZELTME (Maske Kaldırıldı) --- */
 .relative img.rounded-full {
-    border: 3px solid transparent;
-    background: linear-gradient(45deg, var(--neon-cyan), var(--neon-pink)) border-box;
-    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-            mask-composite: exclude;
-    filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.5));
-    transition: transform 0.5s ease;
+    /* Maske kodlarını sildik, yerine basit neon border geldi */
+    border: 2px solid var(--neon-cyan);
+    box-shadow: 0 0 15px var(--neon-pink), inset 0 0 10px var(--neon-pink);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
 
 .relative img.rounded-full:hover {
-    transform: scale(1.05) rotate(5deg); /* Üzerine gelince büyür ve döner */
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 0 25px var(--neon-cyan), inset 0 0 15px var(--neon-cyan);
+    border-color: var(--neon-pink);
 }
 
-/* 4. ADIM: Glassmorphism (Buzlu Cam) Kartlar */
-/* Makale/Proje kartları */
+/* --- DİĞER EFEKTLER --- */
 article {
-    background: rgba(255, 255, 255, 0.05) !important; /* Yarı saydam */
-    backdrop-filter: blur(10px); /* Buzlu cam efekti */
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     transition: all 0.3s ease;
 }
 
 article:hover {
-    transform: translateY(-5px); /* Yukarı kalkma */
-    border-color: var(--neon-cyan); /* Kenar rengi değişir */
-    box-shadow: 0 0 20px rgba(0, 243, 255, 0.2); /* Neon gölge */
+    transform: translateY(-5px);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
 }
 
-/* 5. ADIM: Özel Scrollbar (Kaydırma Çubuğu) */
-::-webkit-scrollbar {
-    width: 10px;
-}
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #0f0f0f; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 5px; border: 2px solid #0f0f0f; }
+::-webkit-scrollbar-thumb:hover { background: var(--neon-orange); }
 
-::-webkit-scrollbar-track {
-    background: #0f0f0f; 
-}
-
-::-webkit-scrollbar-thumb {
-    background: #333; 
-    border-radius: 5px;
-    border: 2px solid #0f0f0f;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--neon-orange); /* Tutunca turuncu olur */
-}
-
-/* 6. ADIM: Butonlar */
+/* Butonlar */
 a.bg-primary-600 {
     background: transparent !important;
     border: 2px solid var(--neon-orange);
@@ -109,10 +86,4 @@ a.bg-primary-600:hover {
     background: var(--neon-orange) !important;
     color: black !important;
     box-shadow: 0 0 20px rgba(249, 115, 22, 0.8);
-}
-
-/* Arka plan görselini zorla YUKARI hizala */
-/* Tema ne derse desin, resmin üst kısmı (kafan) görünecek. */
-img.fixed.inset-0.z-0.h-full.w-full.object-cover {
-  object-position: top center !important;
 }
