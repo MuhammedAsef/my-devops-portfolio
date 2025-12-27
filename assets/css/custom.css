@@ -87,3 +87,22 @@ a.bg-primary-600:hover {
     color: black !important;
     box-shadow: 0 0 20px rgba(249, 115, 22, 0.8);
 }
+
+/* --- SAYFA GENİŞLETME OPERASYONU --- */
+
+/* Metin alanının genişlik sınırını kaldır (Dar sütundan kurtul) */
+.prose {
+    max-width: 90% !important; /* Ekranın %90'ını kullan */
+    min-width: 90% !important;
+}
+
+/* İçerik ortalansın ama geniş olsun */
+section.flex.flex-col.max-w-full.mt-0.prose {
+    align-items: center;
+}
+
+/* Paragrafların ve başlıkların sola yaslanmasını sağla */
+.prose :where(p, h1, h2, h3, ul, ol) {
+    width: 100%;
+    text-align: left;
+}

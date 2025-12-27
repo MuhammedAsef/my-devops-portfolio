@@ -6,7 +6,7 @@ tags: ["Flutter", "Mobile App", "API", "Google Play"]
 summary: "Nöbetçi eczaneleri anlık olarak bulan, kullanıcı dostu mobil uygulama."
 showDate: true
 showHero: true
-heroStyle: "background"
+heroStyle: "thumb"
 ---
 
 ## 📱 Proje Hakkında
@@ -17,13 +17,12 @@ heroStyle: "background"
 
 Yan yana 3 ekran görüntüsü:
 
-<div style="display: flex; gap: 10px; overflow-x: auto;">
-  <img src="featured.jpg" alt="Ana Ekran" width="200">
-  
-  <img src="eczsearch-2.jpg" alt="Yakınımdaki eczane sekmesi" width="200">
-  <img src="eczsearch-3.jpg" alt="Arama sekmesi" width="200">
-  <img src="eczsearch-4.jpg" alt="Eczane listesi" width="200">
-  <img src="eczsearch-5.jpg" alt="Ayarlar ekranı" width="200">
+<div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-start;">
+  <img src="featured.jpg" alt="Giriş Ekranı" style="height: 400px; width: auto; object-fit: contain; border-radius: 10px;">
+  <img src="eczsearch-2.jpg" alt="Yakınımdaki eczane sekmesi" style="height: 400px; width: auto; object-fit: contain; border-radius: 10px;">
+  <img src="eczsearch-3.jpg" alt="Arama sekmesi" style="height: 400px; width: auto; object-fit: contain; border-radius: 10px;">
+  <img src="eczsearch-4.jpg" alt="Eczane listesi" style="height: 400px; width: auto; object-fit: contain; border-radius: 10px;">
+  <img src="eczsearch-5.jpg" alt="Ayarlar ekranı" style="height: 400px; width: auto; object-fit: contain; border-radius: 10px;">
 </div>
 
 Modern arayüzü ve hızlı altyapısı sayesinde, saniyeler içinde konumunuza en yakın açık eczaneyi listeler, yol tarifi almanızı sağlar.
