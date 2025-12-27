@@ -7,6 +7,7 @@ summary: "Nöbetçi eczaneleri anlık olarak bulan, kullanıcı dostu mobil uygu
 showDate: true
 showHero: true
 heroStyle: "thumb"
+showTableOfContents: false
 ---
 
 ## 📱 Proje Hakkında
