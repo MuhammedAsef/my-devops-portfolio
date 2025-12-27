@@ -13,7 +13,21 @@ heroStyle: "background"
 
 **EczSearch**, acil durumlarda insanların en yakın nöbetçi eczaneye en hızlı şekilde ulaşmasını sağlamak amacıyla geliştirdiğim bir mobil uygulamadır.
 
+### 📸 Ekran Görüntüleri
+
+Yan yana 3 ekran görüntüsü:
+
+<div style="display: flex; gap: 10px; overflow-x: auto;">
+  <img src="featured.jpg" alt="Ana Ekran" width="200">
+  
+  <img src="eczsearch-2.jpg" alt="Yakınımdaki eczane sekmesi" width="200">
+  <img src="eczsearch-3.jpg" alt="Arama sekmesi" width="200">
+  <img src="eczsearch-4.jpg" alt="Eczane listesi" width="200">
+  <img src="eczsearch-5.jpg" alt="Ayarlar ekranı" width="200">
+</div>
+
 Modern arayüzü ve hızlı altyapısı sayesinde, saniyeler içinde konumunuza en yakın açık eczaneyi listeler, yol tarifi almanızı sağlar.
+
 
 ### 🛠️ Kullanılan Teknolojiler
 
