@@ -1,4 +1,4 @@
-/* assets/css/custom.css - FINAL FIXED VERSION V2 (Daktilo & Resim Onarıldı) */
+/* assets/css/custom.css - CLEAN CYBERPUNK VERSION */
 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap');
 
@@ -11,16 +11,16 @@
 
 body {
     font-family: var(--font-sans) !important;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Yatay kaydırmayı engelle */
 }
 
-/* --- DAKTİLO EFEKTİ (ONARILDI) --- */
+/* --- DAKTİLO EFEKTİ (ARTIK ÇALIŞACAK!) --- */
+/* Diğer kodlar artık bu efektin genişliğiyle çakışmıyor */
 .typewriter {
     display: inline-flex;
     justify-content: center;
 }
 
-/* BURASI DÜZELTİLDİ: !important eklendi ki diğer kurallar ezmesin */
 .typewriter h1 {
     overflow: hidden;
     border-right: .15em solid var(--neon-orange);
@@ -32,9 +32,8 @@ body {
     color: var(--neon-orange);
     text-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
     
-    /* KRİTİK DÜZELTME: Başlangıç genişliği zorla 0 yapıldı */
-    width: 0 !important;
-    
+    /* Animasyonun temeli */
+    width: 0; 
     animation: 
         typing 3.5s steps(40, end) forwards,
         blink-caret .75s step-end infinite;
@@ -43,7 +42,9 @@ body {
 @keyframes typing { from { width: 0 } to { width: 100% } }
 @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--neon-orange); } }
 
-/* --- PROFİL RESMİ --- */
+/* --- GÖRSEL EFEKTLER (Cyberpunk) --- */
+
+/* Profil Resmi */
 .relative img.rounded-full {
     border: 2px solid var(--neon-cyan);
     box-shadow: 0 0 15px var(--neon-pink), inset 0 0 10px var(--neon-pink);
@@ -56,7 +57,7 @@ body {
     border-color: var(--neon-pink);
 }
 
-/* --- KARTLAR VE EFEKTLER --- */
+/* Kartlar */
 article {
     background: rgba(255, 255, 255, 0.05) !important;
     backdrop-filter: blur(10px);
@@ -92,42 +93,19 @@ a.bg-primary-600:hover {
     box-shadow: 0 0 20px rgba(249, 115, 22, 0.8);
 }
 
-/* --- NUCLEAR OPTION: TAM EKRAN ZORLAMASI (DÜZELTİLMİŞ) --- */
+/* --- SAYFA DÜZENİ (SADELEŞTİRİLMİŞ GENİŞLETME) --- */
 
-/* 1. Kapsayıcıların limitini kaldır */
-main, article, .max-w-7xl, section {
-    max-width: 100% !important;
-    width: 100% !important;
-    min-width: 100% !important;
-    padding-left: 1rem;
-    padding-right: 1rem;
+/* Temanın daraltıcı sınıflarını hedef alıp genişletiyoruz */
+.max-w-7xl, .container, .prose {
+    max-width: 100% !important; /* Kısıtlamayı kaldır */
+    width: auto !important; /* Doğal akışına bırak */
+    padding-left: 2rem; /* Kenarlardan biraz boşluk bırak */
+    padding-right: 2rem;
 }
 
-/* 2. Yazı sütununun darlığını kaldır */
-.prose {
-    max-width: none !important;
-    min-width: 100% !important;
-}
-
-/* 3. İçerik elemanlarını sayfaya yay (H1 hariç tutuldu) */
-/* DÜZELTME: Daktilo bozulmasın diye :not(.typewriter h1) eklendi */
-.prose :where(p, h2, h3, ul, ol, div, pre, blockquote):not(.typewriter h1) {
-    max-width: 100% !important;
-    width: 100% !important;
-    text-align: left;
-}
-
-/* 4. Sağdaki boşluğu sıfırla */
-div.flex.flex-col {
-    width: 100% !important;
-    max-width: 100% !important;
-}
-
-/* 5. RESİM DÜZELTMESİ */
-/* Arka plan resmi bozulmasın diye global img kuralını sildik */
-/* Sadece içerik içindeki resimler sığsın: */
+/* İçeriklerin içindeki resimler taşmasın */
 .prose img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px; /* Hazır el atmışken kenarları da yuvarlayalım */
+    border-radius: 10px;
 }
