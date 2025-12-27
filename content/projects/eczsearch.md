@@ -8,7 +8,7 @@ showDate: true
 
 # --- RESİM AYARLARI ---
 # Proje kartında ve detay sayfasında görünecek resim
-image: "images/projects/eczsearch.jpg"
+image: "images/eczsearch.jpg"
 showHero: true      # Detay sayfasının en üstünde büyük görünsün mü?
 heroStyle: "background" # "background" (arkada) veya "thumb" (küçük) olabilir
 # ----------------------
