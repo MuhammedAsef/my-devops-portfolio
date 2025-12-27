@@ -1,4 +1,4 @@
-/* assets/css/custom.css - FINAL FIXED VERSION */
+/* assets/css/custom.css - FULL WIDTH & CYBERPUNK EDITION */
 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap');
 
@@ -11,6 +11,7 @@
 
 body {
     font-family: var(--font-sans) !important;
+    overflow-x: hidden; /* Yatay scroll barı engelle */
 }
 
 /* --- DAKTİLO EFEKTİ --- */
@@ -38,9 +39,8 @@ body {
 @keyframes typing { from { width: 0 } to { width: 100% } }
 @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--neon-orange); } }
 
-/* --- PROFİL RESMİ DÜZELTME (Maske Kaldırıldı) --- */
+/* --- PROFİL RESMİ --- */
 .relative img.rounded-full {
-    /* Maske kodlarını sildik, yerine basit neon border geldi */
     border: 2px solid var(--neon-cyan);
     box-shadow: 0 0 15px var(--neon-pink), inset 0 0 10px var(--neon-pink);
     transition: transform 0.5s ease, box-shadow 0.3s ease;
@@ -52,7 +52,7 @@ body {
     border-color: var(--neon-pink);
 }
 
-/* --- DİĞER EFEKTLER --- */
+/* --- KARTLAR VE EFEKTLER --- */
 article {
     background: rgba(255, 255, 255, 0.05) !important;
     backdrop-filter: blur(10px);
@@ -88,21 +88,39 @@ a.bg-primary-600:hover {
     box-shadow: 0 0 20px rgba(249, 115, 22, 0.8);
 }
 
-/* --- SAYFA GENİŞLETME OPERASYONU --- */
+/* --- !!! NUCLEAR OPTION: TAM EKRAN ZORLAMASI !!! --- */
+/* Burası o sağdaki boşluğu (kırmızı kutu) yok edecek */
 
-/* Metin alanının genişlik sınırını kaldır (Dar sütundan kurtul) */
+/* 1. Tüm ana kapsayıcıların genişlik limitini kaldır */
+main, article, .max-w-7xl, section {
+    max-width: 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    padding-left: 1rem; /* Yazılar monitöre yapışmasın diye minik boşluk */
+    padding-right: 1rem;
+}
+
+/* 2. Yazı sütununun (prose) darlığını kaldır */
 .prose {
-    max-width: 90% !important; /* Ekranın %90'ını kullan */
-    min-width: 90% !important;
+    max-width: none !important; /* Limit yok */
+    min-width: 100% !important;
 }
 
-/* İçerik ortalansın ama geniş olsun */
-section.flex.flex-col.max-w-full.mt-0.prose {
-    align-items: center;
+/* 3. İçerik elemanlarını sayfaya yay */
+.prose :where(p, h1, h2, h3, ul, ol, div, pre, blockquote) {
+    max-width: 100% !important;
+    width: 100% !important;
+    text-align: left; /* Her şeyi sola yasla */
 }
 
-/* Paragrafların ve başlıkların sola yaslanmasını sağla */
-.prose :where(p, h1, h2, h3, ul, ol) {
-    width: 100%;
-    text-align: left;
+/* 4. Sağdaki 'sidebar' veya 'toc' boşluğunu sıfırla */
+div.flex.flex-col {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Resimlerin oranını bozmadan sığdır */
+img {
+    max-width: 100% !important;
+    height: auto !important;
 }
